@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { apiService } from './services/api.service';
 import { Comments } from './classes/comments';
 import { Posts } from './classes/posts';
+import { Students } from './classes/students';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent {
   constructor(private _apiService: apiService){
 
   }
+  listStudents: Students[];
   listComments:Comments[];
   listPosts: Posts[];
   objPosts: Posts[];
@@ -37,6 +39,15 @@ export class AppComponent {
         }
       )
 
+      this._apiService.getStudents().subscribe(
+        data => {
+          this.listStudents = data;
+        });
+  
+        this._apiService.getStudentsByParameter().subscribe(
+          data =>{
+            this.listStudents = data;
+          });
   }
 
 }

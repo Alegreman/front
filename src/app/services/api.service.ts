@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Posts } from '../classes/posts';
+import { Students } from '../classes/students';
 
 
 @Injectable()
@@ -19,4 +20,11 @@ export class apiService
   post(opost:Posts): Observable<any> {
       return this.httpclient.post("https://jsonplaceholder.typicode.com/posts",opost);
   }  
+  getStudents(): Observable<any>{
+      return this.httpclient.get("");
+  }
+  getStudentsByParameter(): Observable<any>{
+      let params = new HttpParams().set('controlNumber','14400904');
+      return this.httpclient.get("",{params: params});
+  }
 }
