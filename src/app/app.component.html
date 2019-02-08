@@ -5,34 +5,9 @@
     <input (keydown)="onKeydown($event)" type="text" class="form-control" placeholder="Numero de control" aria-label="Username" aria-describedby="basic-addon1">
   </div>
 
-<h2>Get Request (url de api)</h2>
-
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Carrera</th>
-      <th scope="col">Número de Control</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr *ngFor="let s of listStudents">
-          <td>{{ s.id }}</td>
-          <td>{{ s.name }}</td>
-          <td>{{ s.career }}</td>
-          <td>{{ s.controlNumber }}</td>
-        </tr>
-  </tbody>
-</table>
-
-
-
-<h2>Get Request with Parameters(url de api?controlNumber=14400904)</h2>
 <table class="table">
     <thead class="thead-dark">
     <tr>
-      <th>Id</th>
       <th>Nombre</th>
       <th>Carrera</th>
       <th>No. Control</th>
@@ -40,7 +15,6 @@
     </thead>
   
     <tr *ngFor="let s of listStudents">
-      <td>{{ s.id }}</td>
       <td>{{ s.name }}</td>
       <td>{{ s.career }}</td>
       <td>{{ s.controlNumber }}</td>
