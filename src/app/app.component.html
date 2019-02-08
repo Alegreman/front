@@ -1,3 +1,10 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="label">Ingresa tu No. de Control</span>
+    </div>
+    <input (keydown)="onKeydown($event)" type="text" class="form-control" placeholder="Numero de control" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
 <h2>Get Request (url de api)</h2>
 
 <table class="table">
@@ -39,3 +46,5 @@
       <td>{{ s.controlNumber }}</td>
     </tr>
   </table>
+
+  <qrcode [qrdata]="144" [size]="256" [level]="'M'"></qrcode>

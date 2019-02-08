@@ -46,8 +46,20 @@ export class AppComponent {
   
         this._apiService.getStudentsByParameter().subscribe(
           data =>{
+            
             this.listStudents = data;
           });
   }
+  
+  onKeydown(event){
+    if(event.key === 'Enter'){
+      var value = event.target.value
+      return value;
+      
+    }
 
+    
+  }
+  
+  
 }
