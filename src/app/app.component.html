@@ -1,79 +1,41 @@
 <h2>Get Request (url de api)</h2>
 
-<table>
-  <tr>
-    <th>Id</th>
-    <th>Nombre</th>
-    <th>Carrera</th>
-    <th>No. Control</th>
-  </tr>
-
-  <tr *ngFor="let s of listStudents">
-    <td>{{ s.id }}</td>
-    <td>{{ s.name }}</td>
-    <td>{{ s.career }}</td>
-    <td>{{ s.controlNumber }}</td>
-  </tr>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Carrera</th>
+      <th scope="col">Número de Control</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let s of listStudents">
+          <td>{{ s.id }}</td>
+          <td>{{ s.name }}</td>
+          <td>{{ s.career }}</td>
+          <td>{{ s.controlNumber }}</td>
+        </tr>
+  </tbody>
 </table>
+
+
 
 <h2>Get Request with Parameters(url de api?controlNumber=14400904)</h2>
-<table>
-  <tr>
-    <th>Id</th>
-    <th>Nombre</th>
-    <th>Carrera</th>
-    <th>No. Control</th>
-  </tr>
-
-  <tr *ngFor="let s of listStudents">
-    <td>{{ s.id }}</td>
-    <td>{{ s.name }}</td>
-    <td>{{ s.career }}</td>
-    <td>{{ s.controlNumber }}</td>
-  </tr>
-</table>
-
-
-
-<h2>Get Request (https://jsonplaceholder.typicode.com/posts/1/comments)</h2>
-
-<table>
-  <tr>
-    <th>Id</th>
-    <th>PostID</th>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Body</th>
-  </tr>
-
-  <tr *ngFor="let com of listComments">
-    <td>{{ com.id }}</td>
-    <td>{{ com.postId }}</td>
-    <td>{{ com.name }}</td>
-    <td>{{ com.email }}</td>
-    <td>{{ com.body }}</td>
-  </tr>
-</table>
-
-<h2>Get Request with Parameters(https://jsonplaceholder.typicode.com/posts?userId=1)</h2>
-<table>
-  <tr>
-    <th>Id</th>
-    <th>UserID</th>
-    <th>Title</th>
-    <th>Body</th>
-  </tr>
-
-  <tr *ngFor="let com of listPosts">
-    <td>{{ com.id }}</td>
-    <td>{{ com.userId }}</td>
-    <td>{{ com.title }}</td>
-    <td>{{ com.body }}</td>
-  </tr>
-</table>
-
-<h2>Post data returned from (https://jsonplaceholder.typicode.com/posts/)</h2>
-<p>id: {{objPosts?.id}}</p>
-<p>userId: {{objPosts?.userId}}</p>
-<p>Title: {{objPosts?.title}}</p>
-<p>Body: {{objPosts?.body}}</p>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Carrera</th>
+      <th>No. Control</th>
+    </tr>
+    </thead>
+  
+    <tr *ngFor="let s of listStudents">
+      <td>{{ s.id }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.career }}</td>
+      <td>{{ s.controlNumber }}</td>
+    </tr>
+  </table>
